@@ -10,7 +10,8 @@ public class TurnManager : MonoBehaviour
 {
     public static TurnManager Instance;
 
-    public TeamColor currentTurn = TeamColor.White;
+    public TeamColor currentTurn =
+        TeamColor.White;
 
     private void Awake()
     {
@@ -19,15 +20,14 @@ public class TurnManager : MonoBehaviour
 
     public void EndTurn()
     {
-        currentTurn = currentTurn == TeamColor.White
-            ? TeamColor.Black
-            : TeamColor.White;
+        ChessTimer.Instance
+            .AddIncrement(currentTurn);
+
+        currentTurn =
+            currentTurn == TeamColor.White
+                ? TeamColor.Black
+                : TeamColor.White;
 
         Debug.Log("Turno de: " + currentTurn);
-    }
-
-    public bool IsPlayerTurn(TeamColor color)
-    {
-        return currentTurn == color;
     }
 }

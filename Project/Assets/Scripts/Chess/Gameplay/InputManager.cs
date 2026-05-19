@@ -36,7 +36,7 @@ public class InputManager : MonoBehaviour
         if(selectedPiece == null)
         {
             if(piece != null &&
-               TurnManager.Instance.IsPlayerTurn(piece.team))
+               piece.team == TurnManager.Instance.currentTurn)
             {
                 selectedPiece = piece;
 
