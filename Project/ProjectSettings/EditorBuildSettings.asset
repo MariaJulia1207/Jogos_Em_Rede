@@ -6,7 +6,7 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/QuebraGelo.unity
+    path: Assets/=QuebraGelo=/QuebraGelo.unity
     guid: 9c7f7e325cef5374293b5d6ead8c0857
   - enabled: 1
     path: Assets/Scenes/SampleScene.unity
